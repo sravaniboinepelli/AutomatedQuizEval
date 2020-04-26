@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block body %}
+<br><br><br><br>
+    <div class="content-section">
+        <form method="POST" action="" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Upload Answer</legend>
+                </br>
+                <div class="form-group">
+                        {{ form.quiz.label() }}
+                        {{ form.quiz(class="form-control-file") }}
+                        {% if form.quiz.errors %}
+                            {% for error in form.quiz.errors %}
+                                <span class="text-danger">{{ error }}</span><br>
+                            {% endfor %}
+                        {% endif %}
+                </div>
+                </br>
+                <div class="form-group">
+                    {{ form.crct_answer.label() }}
+                    {{ form.crct_answer(class="form-control-file") }}
+                    {% if form.crct_answer.errors %}
+                        {% for error in form.crct_answer.errors %}
+                            <span class="text-danger">{{ error }}</span><br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container">
+
+  <div class="jumbotron">
+   
+<div class="container">
+  </br></br>
+  <h5>{{subject.subject_name}}</h5>
+  <h3>Quiz {{quiz.id}} </h3>
+  </br></br>
+
+   <div class="well">
+        <a  class="label label-primary" href="{{ url_for('download' , file_path=file_path ) }}" style="font-size: 15px;" >Download Quiz {{quiz.id}}</a>
+   </div>
+
+   <!-- <div class="well">
+        <a class="label label-primary" href="{{ url_for('download' , file_path=file_path ) }}" target="_blank"  style="margin-right: 5px;">Download Quiz {{quiz.id}}</a>
+    </div> -->
+
+    <div class="well">
+            <a  class="label label-primary" href="{{ url_for('uploadans' , subject=subject , quiz=quiz ) }}" style="font-size: 15px;" >Submit Quiz {{quiz.id}}</a>
+    </div>
+
+  
+</div>
+    
+</div>
+
+{% endblock %}

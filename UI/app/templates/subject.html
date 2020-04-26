@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container">
+
+  <div class="jumbotron">
+   
+<div class="container">
+  </br></br>
+  <h3>{{subject.subject_name}}</h3>
+    </br></br>
+    
+ {% for q in quizes %}
+<div class="well">
+<a  href="{{ url_for('quiz' , id=q.id, subject_id=subject.id)  }}" style="font-size: 25px;" >Quiz {{q.id}}</a>
+</div>
+{% endfor %}
+  
+</div>
+    
+</div>
+
+{% endblock %}

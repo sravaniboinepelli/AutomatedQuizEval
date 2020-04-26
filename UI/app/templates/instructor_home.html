@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container">
+
+  <div class="jumbotron">
+   
+<div class="container">
+  </br></br>
+  <h3>{{instructor}}</h3>
+  </br></br>
+  <!-- <h2>Subjects</h2> -->
+    
+{% for sub in subjects %}
+<div class="well">
+  <a  href="{{ url_for('subject_prof', id=sub.id ) }}" style="font-size: 30px;">{{sub.subject_name}}</a>
+</div>
+{% endfor %}
+  
+</div>
+</div>
+
+{% endblock %}

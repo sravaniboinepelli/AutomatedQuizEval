@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container">
+
+  <div class="jumbotron">
+   
+<div class="container">
+  </br></br>
+  <h3>{{subject.subject_name}}</h3>
+    </br></br>
+
+    <div class="well">
+        <a  class="label label-primary" href="{{ url_for('uploadquiz') }}" style="font-size: 15px;" >Add New Quiz</a>
+    </div>
+
+</br></br>
+<h4>Previous Quizes</h4>
+ {% for q in quizes %}
+<div class="well">
+<a  href="{{ url_for('quiz_prof' , id=q.id)  }}" style="font-size: 15px;" >Quiz {{q.id}}</a>
+</div>
+{% endfor %}
+  
+</div>
+    
+</div>
+
+{% endblock %}
