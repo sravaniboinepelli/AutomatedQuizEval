@@ -1,0 +1,8 @@
+sqlalchemy
+wtforms
+flask
+flask_login
+flask_sqlalchemy
+flask_wtf
+datetime
+email_validator
