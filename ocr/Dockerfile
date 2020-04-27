@@ -4,8 +4,8 @@ COPY requirements.txt /tmp/
 
 RUN pip install -U pip
 RUN pip install -r /tmp/requirements.txt
-RUN sudo apt-get update
-RUN sudo apt-get install tesseract-ocr
+RUN apt-get update
+RUN apt-get install tesseract-ocr -y
 COPY ./app /app
 
 ENV OCR_PORT "80"
