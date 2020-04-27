@@ -1,1 +1,1 @@
-pip install git+https://github.com/AndriyMulyar/semantic-text-similarity
+git+https://github.com/AndriyMulyar/semantic-text-similarity
